@@ -1,0 +1,12 @@
+# Anki MCQ Importer Requirements
+# Note: This project uses mostly Python standard library
+# No external dependencies required for core functionality
+
+# Optional dependencies for development
+pytest>=7.0.0  # For running tests
+black>=22.0.0  # For code formatting
+flake8>=5.0.0  # For linting
+mypy>=0.990  # For type checking
+
+# Optional for cross-platform clipboard support
+pyperclip>=1.8.2  # Cross-platform clipboard (optional, fallback to native methods)
