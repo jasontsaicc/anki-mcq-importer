@@ -1,0 +1,52 @@
+# Sample MCQ Questions for Testing
+# Copy any of these examples to test the importer
+
+# Format 1: Structured Format
+question: A company wants to run a custom network analysis software that requires very high networking performance. Which EC2 instance type should they choose?
+optionA: t3.micro
+optionB: m5.large
+optionC: c5n.18xlarge
+optionD: r5.xlarge
+optionE: a1.medium
+optionF: t2.nano
+answer: C
+note: C5n instances are optimized for network-intensive workloads with up to 100 Gbps network performance.
+
+---
+
+# Format 2: Bullet Point Format
+• question: Which AWS service provides a fully managed NoSQL database?
+• options:
+A. Amazon RDS
+B. Amazon DynamoDB
+C. Amazon Redshift
+D. Amazon ElastiCache
+E. Amazon Neptune
+F. Amazon Aurora
+• answer: B
+• notes: DynamoDB is AWS's fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.
+
+---
+
+question: What is the maximum size of an S3 object that can be uploaded in a single PUT operation?
+optionA: 5 GB
+optionB: 10 GB
+optionC: 50 GB
+optionD: 100 GB
+optionE: 500 GB
+optionF: 5 TB
+answer: A
+note: The maximum size for a single PUT operation is 5 GB. For larger objects, use multipart upload.
+
+---
+
+• question: Which feature allows you to control access to AWS services and resources centrally?
+• options:
+A. AWS Identity and Access Management (IAM)
+B. Amazon VPC
+C. AWS CloudTrail
+D. AWS Config
+E. AWS Organizations
+F. AWS Shield
+• answer: A
+• notes: IAM enables you to manage access to AWS services and resources securely. You can create and manage AWS users and groups, and use permissions to allow and deny their access.
