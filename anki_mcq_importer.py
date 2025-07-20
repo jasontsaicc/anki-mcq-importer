@@ -69,10 +69,10 @@ class ClipboardManager:
         print("Testing clipboard access...")
         content = self.get_clipboard()
         if content:
-            print(f"✓ Clipboard access OK (content length: {len(content)} chars)")
+            print(f" Clipboard access OK (content length: {len(content)} chars)")
             return True
         else:
-            print("⚠️  Clipboard is empty or inaccessible")
+            print("  Clipboard is empty or inaccessible")
             return False
 
 class AnkiConnector:
@@ -329,7 +329,7 @@ class AnkiMCQImporter:
         }
         
         # Display parsed result
-        print(f"\n📝 Question: {fields['question'][:60]}...")
+        print(f"\n Question: {fields['question'][:60]}...")
         print(f"✓ Answer: {fields['answer']}")
         
         try:
@@ -342,7 +342,7 @@ class AnkiMCQImporter:
             )
             
             self.import_count += 1
-            print(f"✅ Imported successfully (ID: {note_id}, Total: {self.import_count})")
+            print(f" Imported successfully (ID: {note_id}, Total: {self.import_count})")
             
             # Add to processed cache
             self.processed_hashes.append(content_hash)
@@ -352,28 +352,28 @@ class AnkiMCQImporter:
         except Exception as e:
             error_msg = str(e)
             if "duplicate" in error_msg.lower():
-                print("⚠️  Skipped: Duplicate card")
+                print(" Skipped: Duplicate card")
                 self.processed_hashes.append(content_hash)
             else:
-                print(f"❌ Import failed: {error_msg}")
+                print(f" Import failed: {error_msg}")
             return False
     
     def start_monitoring(self):
         """Start clipboard monitoring"""
         print("\n" + "=" * 60)
-        print("🎯 Anki MCQ Auto Importer v" + __version__)
+        print(" Anki MCQ Auto Importer v" + __version__)
         print("=" * 60)
-        print(f"📚 Deck: {self.config['deck_name']}")
-        print(f"📋 Model: {self.config['model_name']}")
-        print(f"🏷️  Tags: {', '.join(self.config['tags'])}")
-        print(f"⏱️  Check interval: {self.config['check_interval']}s")
+        print(f" Deck: {self.config['deck_name']}")
+        print(f" Model: {self.config['model_name']}")
+        print(f"  Tags: {', '.join(self.config['tags'])}")
+        print(f"  Check interval: {self.config['check_interval']}s")
         
         # Test clipboard
         self.clipboard.test_clipboard()
         
-        print("\n🔍 Monitoring clipboard...")
-        print("📋 Copy MCQ text to auto-import")
-        print("🛑 Press Ctrl+C to stop")
+        print("\n Monitoring clipboard...")
+        print(" Copy MCQ text to auto-import")
+        print(" Press Ctrl+C to stop")
         print("-" * 60)
         
         check_count = 0
@@ -422,11 +422,11 @@ class AnkiMCQImporter:
         """Show import summary"""
         elapsed = (datetime.now() - self.start_time).seconds
         print(f"\n\n{'=' * 60}")
-        print("📊 Import Summary")
+        print(" Import Summary")
         print(f"{'=' * 60}")
-        print(f"✅ Cards imported: {self.import_count}")
-        print(f"🔍 Unique items processed: {len(self.processed_hashes)}")
-        print(f"⏱️  Total time: {elapsed//60}m {elapsed%60}s")
+        print(f" Cards imported: {self.import_count}")
+        print(f" Unique items processed: {len(self.processed_hashes)}")
+        print(f"⏱  Total time: {elapsed//60}m {elapsed%60}s")
         if self.import_count > 0:
             print(f"⚡ Average: {elapsed/self.import_count:.1f}s per card")
         print(f"{'=' * 60}")
@@ -531,9 +531,9 @@ Examples:
         importer = AnkiMCQImporter(config)
         importer.start_monitoring()
     except KeyboardInterrupt:
-        print("\n\n👋 Goodbye!")
+        print("\n\n Goodbye!")
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
