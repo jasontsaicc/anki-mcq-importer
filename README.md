@@ -2,20 +2,20 @@
 
 Automatically import Multiple Choice Questions (MCQs) into Anki from your clipboard. Perfect for exam preparation, especially for AWS certifications and other technical exams.
 
-## ✨ Features
+##  Features
 
-- 📋 **Clipboard Monitoring**: Automatically detects and imports MCQs when copied
-- 🔄 **Smart Parsing**: Supports multiple MCQ text formats
-- 🚫 **Duplicate Prevention**: Automatically skips already imported questions
-- 💾 **Memory Efficient**: Optimized for long-running sessions
-- ⚙️ **Configurable**: Customize deck names, tags, and import behavior
-- 🖥️ **Cross-platform**: Works on macOS, with Windows/Linux support planned
+-  **Clipboard Monitoring**: Automatically detects and imports MCQs when copied
+-  **Smart Parsing**: Supports multiple MCQ text formats
+-  **Duplicate Prevention**: Automatically skips already imported questions
+-  **Memory Efficient**: Optimized for long-running sessions
+-  **Configurable**: Customize deck names, tags, and import behavior
+-  **Cross-platform**: Works on macOS, with Windows/Linux support planned
 
-## 📸 Demo
+##  Demo
 
 
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -51,7 +51,7 @@ python3 anki_mcq_importer.py --deck "AWS Exam Prep"
 python3 anki_mcq_importer.py --setup
 ```
 
-## 📝 Supported Formats
+##  Supported Formats
 
 ### Format 1: Structured MCQ
 ```
@@ -80,7 +80,7 @@ F. Amsterdam
 • notes: Paris has been the capital of France since 987 AD.
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 Create a `anki_mcq_config.json` file or use `--setup`:
 
@@ -106,7 +106,7 @@ Create a `anki_mcq_config.json` file or use `--setup`:
 | `max_cache_size` | Maximum cached items | `100` |
 | `verbose` | Enable detailed logging | `false` |
 
-## 🛠️ Advanced Usage
+##  Advanced Usage
 
 ### Command Line Options
 
@@ -170,14 +170,14 @@ The tool includes automatic memory management:
 - Performs garbage collection every 5 minutes
 - Uses efficient data structures (deque)
 
-## 📊 Performance
+##  Performance
 
 - **Memory Usage**: ~10-20MB for typical usage
 - **CPU Usage**: < 1% when idle
 - **Import Speed**: ~1-2 seconds per card
 - **Clipboard Check**: Configurable (default 1 second)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -223,7 +223,3 @@ python3 -m pytest tests/
 ##  Support
 
 - 📧 Contact: jason.tsaicc@gmail.com
-
----
-
-Made with ❤️ for the Anki community
