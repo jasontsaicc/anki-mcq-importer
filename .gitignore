@@ -62,6 +62,7 @@ env/
 *.swo
 *~
 .DS_Store
+uv.lock
 
 # Project specific
 anki_mcq_config.json
